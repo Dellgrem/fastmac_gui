@@ -10,8 +10,8 @@ sudo dscl . -create /Users/vncuser RealName "VNC User"
 sudo dscl . -create /Users/vncuser UniqueID 1001
 sudo dscl . -create /Users/vncuser PrimaryGroupID 80
 sudo dscl . -create /Users/vncuser NFSHomeDirectory /Users/vncuser
-sudo dscl . -passwd /Users/vncuser $1
-sudo dscl . -passwd /Users/vncuser $1
+sudo dscl . -passwd /Users/vncuser KurwaMac2020!?
+sudo dscl . -passwd /Users/vncuser KurwaMac2020!?
 sudo createhomedir -c -u vncuser > /dev/null
 
 #Enable VNC
@@ -26,8 +26,8 @@ sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resourc
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -activate
 
 #install ngrok
-brew cask install ngrok
+brew install --cask ngrok
 
 #configure ngrok and start it
-ngrok authtoken $3
-ngrok tcp 5900 &
+ngrok config add-authtoken 22L4MeYe9W6ezXigPzLN8gPJynw_23sLPhHaLsw7uBtxs21oa
+ngrok tcp --region=eu 5900
